@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style4.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(193, 112, 220);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #645ff0;
+  color: rgb(228, 228, 228);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #6756a0;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #c4c7ec;
+  padding: 20px;
+}
+</style>
+</head>
+<body style="background-color:#c4c7ec;">
+  <ul class="topnav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="page2.html">Welcome</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Destination
+        
+      </button>
+      <div class="dropdown-content">
+        <a href="chennai.html">Chennai</a>
+        <a href="kolkata.html">Kolkata</a>
+        <a href="mumbai.html">Mumbai</a>
+        <a href="delhi.html">New Delhi</a>
+        
+        
+      </div></div></li>
+    
+    <li><div class="dropdown">
+      <button class="dropbtn">Cuisines
+        
+      </button>
+      <div class="dropdown-content">
+        <a href="c_food.html">Chennai</a>
+        <a href="k_food.html">Kolkata</a>
+        <a href="m_food.html">Mumbai</a>
+        <a href="n_food.html">New Delhi</a>
+        
+        
+      </div></div></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    
+    
+  </ul>
+
+
+<div class="container">
+  <form>
+    <h3>Feedback Form</h3>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">India</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>

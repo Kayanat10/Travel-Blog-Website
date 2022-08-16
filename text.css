@@ -1,0 +1,41 @@
+body
+{
+    background-color: rgb(217, 214, 245);
+}
+
+.navbar{
+    list-style:none;
+    background-color:rgb(189, 181, 239);;
+    padding: 10px;
+}
+
+.navitem{
+    text-decoration: none;
+    background-color:rgb(189, 181, 239);
+    color: #fff;
+    display: inline;
+    padding: 10px;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  ul.topnav li {float: left;}
+  
+  ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  ul.topnav li a:hover:not(.active) {background-color: rgb(101, 157, 240);}
+  
+  ul.topnav li a.active {background-color: #1b56af;}
+  
+  

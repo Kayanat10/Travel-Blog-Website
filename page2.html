@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="map.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <ul class="topnav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page2.html">Welcome</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Destination
+        
+      </button>
+      <div class="dropdown-content">
+        <a href="chennai.html">Chennai</a>
+        <a href="kolkata.html">Kolkata</a>
+        <a href="mumbai.html">Mumbai</a>
+        <a href="delhi.html">New Delhi</a>
+        
+        
+      </div></div></li>
+    
+    <li><div class="dropdown">
+      <button class="dropbtn">Cuisines
+        
+      </button>
+      <div class="dropdown-content">
+        <a href="c_food.html">Chennai</a>
+        <a href="#home">Kolkata</a>
+        <a href="#home">Mumbai</a>
+        <a href="#home">New Delhi</a>
+        
+        
+      </div></div></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    
+        
+      
+    </ul>
+    <br>
+    <div ng-controller="myController" style="text-align:center">
+        <video id="myVideo" height="600" width="1500">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <br>
+        <button ng-click="rewind()"><img class="btn" src="images/rewind.jpg" alt=""></button>
+        <button ng-click="playVid()"><img class="btn" src="images/play.jpg" alt=""></button>
+        <button ng-click="pauseVid()"><img class="btn" src="images/pause.jpg" alt=""></button>
+        <button ng-click="fastfwrd()"><img class="btn" src="images/fwd.jpg" alt=""></button>
+        <button ng-click="restart()"><img class="btn" src="images/replay.jpg" alt=""></button>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myController', ['$scope', function ($scope) {
+            $scope.playVid = function () {
+                var vid = document.getElementById("myVideo");
+                vid.play();
+            };
+            $scope.pauseVid = function () {
+                var vid = document.getElementById("myVideo");
+                vid.pause();
+            };
+            $scope.restart = function () {
+                var vid = document.getElementById("myVideo");
+                vid.pause();
+                vid.currentTime = 0;
+                vid.load();
+                vid.play();
+            };
+            $scope.rewind = function () {
+                var vid = document.getElementById("myVideo");
+                vid.currentTime -= 20;
+                vid.play();
+            };
+            $scope.fastfwrd = function () {
+                var vid = document.getElementById("myVideo");
+                vid.currentTime += 20;
+                vid.play();
+            };
+        }]);
+    </script>
+    <br><br>
+<div class="mine">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3956879.750157559!2d75.1291815518811!3d14.41906992307617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1653989267707!5m2!1sen!2sin" 
+width="800" 
+height="450" 
+style="border:0;" 
+allowfullscreen="" 
+loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+<div>
+   
+   <i><h2><br><br>Come and join us in this beautiful journey of exploring places across World!!<br>
+        We gladly welcome you to explore and travel places with us.
+        Locate places in this map for easier navigation.
+        Share your experiences with us.<br>
+        In case of any issues you can write to us at abc123@gmail.com.<br>
+        You can submit feedbacks via feedback page.
+        We wish you luck in this journey!!<br><br><br><br>
+        --THANK YOU<br>
+   </h2></i>
+</div>
+<br>
+<div class="footer">
+    <p>Copyright 2022 @wanderlust</p>
+  </div>
+</body>
+</html>
